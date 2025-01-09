@@ -1,0 +1,17 @@
+@import url(colors.css);
+
+/*====== Interactions ======*/
+
+button:active {
+
+	background-color: var(--main_blue);
+	color: white;
+
+}
+
+button.wrong {
+
+	background-color: black;
+	color: white;
+
+}
