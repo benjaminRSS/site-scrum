@@ -1,1 +1,160 @@
-
+body {
+    font-family: "Inter", serif;
+ }
+ 
+ main {
+     display: flex;
+     flex-direction: row;
+     
+     margin: 50px;
+     gap: 180px;
+ }
+ 
+ .espace {
+     width: 120px;
+ }
+ 
+ h1 {
+     text-align: center;
+ margin: 0;
+     font-size: 30px;
+     font-weight: bold;
+     color: black;
+ }
+ 
+ h2 {
+     font-size: 25px;
+     font-weight: bold;
+     color: #087FE7;
+     margin: 0;
+ }
+ nav {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     gap: 51px;
+     position: fixed;
+     width: 120px;
+     height: 646px;
+ }
+ 
+ nav ul {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;  
+     padding: 0;
+     margin: 0;
+ }
+ 
+ nav ul li {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ 
+ }
+ 
+ 
+ .chap {
+     width: 45px;
+     height: 45px;
+     border-radius: 100px;
+     text-align: center;
+     background-color: #99B9FF;
+ }
+ 
+ .actif {
+     background-color: #087FE7;
+ }
+ 
+ .trait {
+     width: 3px;
+     height: 50px;
+     background-color: #99B9FF;
+ }
+ 
+ nav ul li p {
+     margin: 0;
+     padding: 0; 
+     align-items: center;
+     color: #ffff;
+     font-weight: bold;
+ }
+ 
+ section #cours {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 900px;
+ }
+ 
+ #title {
+ position: sticky;
+ top: 0;
+ background-color: #ffff;
+ padding: 30px 0px;
+ margin: -1px;
+ }
+ 
+ 
+ 
+ 
+ #cours {
+     width: 1113px;
+     margin-top: 50px;
+ }
+ 
+ #cours p {
+     font-size: 18px;
+     text-align: justify;
+ }
+ 
+ .margebottom {
+     display: flex;
+     flex-direction: row;
+     gap: 25px;
+     margin: 25px 0px;
+ }
+ 
+ .margetop {
+     display: flex;
+     flex-direction: row;
+     gap: 25px;
+     margin-top: 25px;
+ }
+ .both {
+     margin: 25px 0px; 
+ }
+ 
+ button {
+     display: flex;
+     flex-direction: row;
+     gap: 10px ;
+     border: none;
+     background: none;
+     align-items: center;
+     cursor: pointer;
+ }
+ .next {
+     text-decoration: none;
+ }
+ .next p {
+     font-size: 25px;
+     color: #087FE7;
+     font-family: "Inter", serif;
+ }
+ footer {
+     display: flex;
+     justify-content: flex-end;
+     margin-top: 50px;
+ }
+ 
+ /*#cours img {
+     width: 1118px;
+     height: 327px;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }*/
