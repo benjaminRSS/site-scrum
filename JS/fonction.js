@@ -1,7 +1,7 @@
 
 //Il faut référencer l'élément html qui sert de titre + celui du conteneur du cours, enfin il suffit de mettre le nom de l'état qui va le remplacer.
 
-function changeState(title, contentContainer, state){
+export function changeState(title, contentContainer, state){
 
 	if (title instanceof HTMLElement && contentContainer instanceof HTMLElement){
 
@@ -121,7 +121,7 @@ function changeState(title, contentContainer, state){
 		
 				case question1:
 		
-					title.textContent = "Chapitre 1: Lancement du Projet";
+					title.textContent = "Quelle est la première étape de la méthode SCRUM ?";
 					contentContainer.innerHTML = `
 				
 						<img src="" alt="">
@@ -132,12 +132,22 @@ function changeState(title, contentContainer, state){
 							
 								<li>
 								
-									<button>Quels sont les trois rôles principaux dans une équipe SCRUM ?</button>
+									<button>Mise en production du produit</button>
 								
 								</li>
 								<li>
 								
-									<button>Comment appelle-t-on le document qui liste et priorise les fonctionnalités du projet ?</button>
+									<button>Constitution de l’équipe SCRUM</button>
+								
+								</li>
+								<li>
+								
+									<button>Clarification de la vision du produit</button>
+								
+								</li>
+								<li>
+								
+									<button>Réunion de planification du sprint</button>
 								
 								</li>
 							
@@ -151,7 +161,7 @@ function changeState(title, contentContainer, state){
 		 
 				case question2:
 		
-					title.textContent = "Chapitre 2: Planification";
+					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
 					contentContainer.innerHTML = `
 				
 						<img src="" alt="">
@@ -162,12 +172,22 @@ function changeState(title, contentContainer, state){
 							
 								<li>
 								
-									<button>Quelle est la durée moyenne d’un sprint en méthode SCRUM ?</button>
+									<button>Le Product Owner</button>
 								
 								</li>
 								<li>
 								
-									<button>Lors de quelle réunion les user stories sont-elles transformées en tâches concrètes ?</button>
+									<button>Le Commanditaire</button>
+								
+								</li>
+								<li>
+								
+									<button>Le Tuteur de stage</button>
+								
+								</li>
+								<li>
+								
+									<button>Le SCRUM Master</button>
 								
 								</li>
 							
@@ -334,11 +354,47 @@ function changeState(title, contentContainer, state){
 
 					break;
 		 
-			}
+		}
 
 	}else{
 
 		return "Le titre et le conteneur des états doivent être du type HTMLElement..";
 	}
 
+}
+
+//J'ai pas le choix que de faire une fonction simple => j'ai besoin de la retrouver pour l'enlever
+export function btnListenerConf(){
+
+	//Faire vérifier si la réponse est bonne => pouvoir déterminer le style de la mauvaise réponse
+
+	let nextBtn = document.createElement("button");
+
+	nextBtn.textContent = "Suivant ->";
+	nextBtn.style = "color: var(--secondary_blue);";
+
+	button.parentElement.appendChild(nextBtn);
+
+	button.removeEventListener("click", btnListenerConf()); //Après avoir cliqué sur le boutton on fait en sorte qu'il ne soit plus cliquable.
+
+
+
+	//Vérifier -> l'attribut "response" => tu ajoute la classe "wrong" si c'est faux + on va faire en sorte que le CSS de "Wrong" est prioritaire sur le CSS de actif de base
+
+	const response = button.getAttribute("response");
+
+
+	if (response === "false"){
+
+		//On ajoute la classe "Wrong"
+		button.classList.add("wrong");
+
+	}
+	
+	//On révèle la vrai réponse
+	if (response === "true"){
+
+		button.classList.add("correct");
+
+	}
 }

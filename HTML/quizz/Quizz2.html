@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Example</title>
+    <link rel="stylesheet" href="/CSS/quizz.css">
+    </head>
+    <body>
+        <div class="quiz-container">
+            <h1>2. Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?</h1>
+            <div class="question-area"></div>
+            <div class="answers">
+                <button class="answer" data-correct="false">Réponse A : <br>Le Product Owner</button>
+                <button class="answer" data-correct="false">Réponse B : <br>Le Commanditaire</button>
+                <button class="answer" data-correct="false">Réponse C : <br>Le Tuteur de stage</button>
+                <button class="answer" data-correct="true">Réponse D : <br>Le SCRUM Master</button>
+            </div>
+            <div class="footer">
+                <div class="message" style="display: none;"></div> <!-- Message area -->
+                <button class="next" disabled>Valider</button>
+                <form action="/HTML/quizz/Quizz3.html" method="get">
+                    <button class="next-next" style="display: none;">Suivant →</button>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="/JS/quiz.js"></script>
+    </body>
+</html>

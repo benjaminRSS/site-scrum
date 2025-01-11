@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Example</title>
+    <link rel="stylesheet" href="/CSS/quizz.css">
+    </head>
+    <body>
+        <div class="quiz-container">
+            <h1>9. Quel est le rôle du SCRUM Master lors de la rétrospective ?</h1>
+            <div class="question-area"></div>
+            <div class="answers">
+                <button class="answer" data-correct="true">Réponse A : <br>Que la réunion aboutisse sur des améliorations</button>
+                <button class="answer" data-correct="false">Réponse B : <br>De nommer un nouveau SCRUM Master</button>
+                <button class="answer" data-correct="false">Réponse C : <br>Il n’y participe pas</button>
+                <button class="answer" data-correct="false">Réponse D : <br>Il y assiste mais ne doit pas intervenir</button>
+            </div>
+            <div class="footer">
+                <div class="message" style="display: none;"></div> <!-- Message area -->
+                <button class="next" disabled>Valider</button>
+                <form action="/HTML/quizz/Quizz10.html" method="get">
+                    <button class="next-next" style="display: none;">Suivant →</button>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="/JS/quiz.js"></script>
+    </body>
+</html>
