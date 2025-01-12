@@ -135,7 +135,7 @@ export function changeState(title, contentContainer, state){
 					title.textContent = "1. Quelle est la première étape de la méthode SCRUM ?";
 					contentContainer.innerHTML = `
 				
-						<img src="" alt="">
+						<img src="../images/ch1-img3.png" alt="image illustration pour les questions">
 						
 						<div>
 						

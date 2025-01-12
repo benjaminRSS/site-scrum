@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		chapitreActuel++;
 	  
 		if (chapitreActuel > 6) {
-		  window.location.href = "../HTML/quizz/Quizz_accueil.html"; // ajouter chemin page quiz
+		  window.location.href = "../HTML/quiz.html"; // ajouter chemin page quiz
 		} else {
 		  changeState(title, contentContainer, chapitreActuel);
 		  smoothScrolling(nextButton, event); // Passez bien l'événement ici
