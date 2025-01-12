@@ -345,27 +345,27 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question8":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "8. Que présente l’équipe pendant la revue de sprint ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="false">Réponse A : <br>Le calendrier SCRUM</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="true">Réponse B : <br>Les fonctionnalités réalisés</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
+                			<button class="answer" data-correct="false">Réponse C : <br>Les interrogations du commanditaire</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
+                			<button class="answer" data-correct="false">Réponse D : <br>L’avis de la presse sur le produit</button>
 							
 						</li>			
 				
@@ -377,27 +377,27 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question9":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "9. Quel est le rôle du SCRUM Master lors de la rétrospective ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="true">Réponse A : <br>Que la réunion aboutisse sur des améliorations</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="false">Réponse B : <br>De nommer un nouveau SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
+                			<button class="answer" data-correct="false">Réponse C : <br>Il n’y participe pas</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
+                			<button class="answer" data-correct="false">Réponse D : <br>Il y assiste mais ne doit pas intervenir</button>
 							
 						</li>			
 				
@@ -409,29 +409,19 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question10":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "10. La Rétrospective aide l’équipe à être plus efficace ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="true">Réponse A : <br>VRAI</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="false">Réponse B : <br>FAUX</button>
 							
 						</li>
-						<li>
-
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
-							
-						</li>
-						<li>
-
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
-							
-						</li>			
 				
 					`;
 
@@ -441,29 +431,19 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question11":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "11. Après la validation et la mise en production du produit, le projet est définitivement clôt ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="false">Réponse A : <br>VRAI</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="true">Réponse B : <br>FAUX</button>
 							
-						</li>
-						<li>
-
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
-							
-						</li>
-						<li>
-
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
-							
-						</li>			
+						</li>		
 				
 					`;
 
@@ -473,27 +453,27 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question12":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "12. Qui procède à la mise en production du produit ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="false">Réponse A : <br>Le commanditaire</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="false">Réponse B : <br>Le Product Owner</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
+                			<button class="answer" data-correct="false">Réponse C : <br>Le SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
+                			<button class="answer" data-correct="true">Réponse D : <br>L’équipe projet</button>
 							
 						</li>			
 				
@@ -505,27 +485,27 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question13":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "13. Quelle est l’étape suivante après la revue dans un cycle SCRUM classique ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="true">Réponse A : <br>La rétrospective</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="false">Réponse B : <br>La validation du produit</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
+                			<button class="answer" data-correct="false">Réponse C : <br>L’élaboration du calendrier SCRUM</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
+                			<button class="answer" data-correct="false">Réponse D : <br>La constitution de l’équipe SCRUM</button>
 							
 						</li>			
 				
@@ -537,29 +517,19 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question14":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "14. Des feedbacks sur le produit ne peuvent être obtenus qu’après livraison et mise en production du produit ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="false">Réponse A : <br>Vrai</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="true">Réponse B : <br>Faux</button>
 							
-						</li>
-						<li>
-
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
-							
-						</li>
-						<li>
-
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
-							
-						</li>			
+						</li>	
 				
 					`;
 
@@ -569,27 +539,27 @@ export function changeState(title, contentContainer, state){
 		 
 				case "question15":
 		
-					title.textContent = "Qui veille à ce que la méthode SCRUM soit respectée pendant le projet?";
+					title.textContent = "15. Quel est l’acteur principal de la première phase du projet ?";
 					contentContainer.innerHTML = `
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" data-correct="false">Réponse A : <br>Le commanditaire</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" data-correct="true">Réponse B : <br>Le Product Owner</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
+                			<button class="answer" data-correct="false">Réponse C : <br>Le SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
+                			<button class="answer" data-correct="false">Réponse D : <br>L’équipe projet</button>
 							
 						</li>			
 				
