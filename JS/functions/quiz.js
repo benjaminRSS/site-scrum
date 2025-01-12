@@ -561,11 +561,17 @@ export function changeState(title, contentContainer, state){
 
                 			<button class="answer" data-correct="false">Réponse D : <br>L’équipe projet</button>
 							
-						</li>			
+						</li>		
+      					<br>
+        				<button class="home-btn">Retour à l'accueil</button>
 				
 					`;
 
 					initBtns(document.querySelectorAll(".answer"));
+
+					document.querySelector(".home-btn").addEventListener("click", () => {
+        				window.location.href = "../../HTML/index.html";
+    					});
 
 					break;
 		 
