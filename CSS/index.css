@@ -1,1 +1,60 @@
+@import url(../CSS/components/colors.css);
+
+body {
+    font-family: "Inter", serif;
+ }
+ 
+ main {
+     display: flex;
+     flex-direction: row;
+     margin: 45px;
+     gap: 100px;
+ }
+
+
+ h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    text-align: justify;
+}
+.intro{
+    margin: 20px 0px;
+}
+
+main section ul li {
+    list-style: none;
+    margin: 10px 0px;
+}
+button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px ;
+    border: none;
+    background: none;
+    align-items: center;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+   
+}
+
+a button {
+    font-size: 20px;
+    font-family: "Inter", serif;
+    color: #ffff;
+    background-color: black;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
 
