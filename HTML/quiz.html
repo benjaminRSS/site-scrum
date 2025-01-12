@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/index.css"/>
     <link rel="stylesheet" href="../CSS/quizz.css"/>
-    <script src="../JS/index.js"></script>
+    <script type="module" src="../JS/index.js"></script> <!---Faut dire que le scripte est un module pour les imports--->
     <title>QUIZZ</title>
 </head>
 <body>
     <main>
         <!-- partie texte -->
-        <div class="#">
-            <h1>Testes tes connaissances en SCRUM maintenant !</h1>
+        <h1>Testes tes connaissances en SCRUM maintenant !</h1>
+        <div id="stateContainer">
 
             <p>Bravo ! Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Ut et massa mi elit. Ut et massa mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -29,7 +29,7 @@
         <!-- partie image -->
         <div>
             <img src="../images/illu quizz.svg" alt="illustration pour la page quiz">
-            <button id="commencer" type="submit">Commencer le quiz</button>
+            <button id="startBtn">Commencer le quiz</button>
         </div>
     </main>
 </body>
