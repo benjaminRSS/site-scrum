@@ -1,4 +1,3 @@
-
 import { stateContainer } from "../index.js";
 
 
@@ -599,6 +598,17 @@ function remListeners(buttons){
 
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const CommencerQuizButton = document.getElementById("commencer");
+
+    if (CommencerQuizButton) {
+        CommencerQuizButton.addEventListener("click", () => {
+            changeState("question1");
+			console.log("test");
+        });
+	}
+});
+
 //J'ai pas le choix que de faire une fonction simple => j'ai besoin de la retrouver pour l'enlever
 function btnListenerConf(event){
 
@@ -652,4 +662,7 @@ function btnListenerConf(event){
 
 	}
 
+	
+
 }
+
