@@ -1,0 +1,100 @@
+@import url(../CSS/components/colors.css);
+
+body {
+    font-family: "Inter", serif;
+ }
+ 
+ main {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin: 0px 45px;
+     gap: 100px;
+ }
+
+ 
+button {
+     display: flex;
+     flex-direction: row;
+     gap: 10px ;
+     border: none;
+     background: none;
+     align-items: center;
+     cursor: pointer;
+ }
+ .next {
+     text-decoration: none;
+ }
+ .next p {
+     font-size: 25px;
+     color: var(--main_blue);
+     font-family: "Inter", serif;
+ }
+ h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Responsive styles */
+@media (max-width: 1150px) { 
+
+    .illu img {
+        max-width: 400px;
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .illu img {
+        max-width: 400px;
+    }
+
+
+
+    .next p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 850px) { 
+
+    .illu img {
+        max-width: 500px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .next p {
+        font-size: 1rem;
+    }
+    .illu img {
+        max-width: 400px;
+    }
+}

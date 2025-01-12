@@ -1,3 +1,6 @@
+@import url(../CSS/components/colors.css);
+
+
 body {
     font-family: "Inter", serif;
  }
@@ -25,7 +28,7 @@ body {
  h2 {
      font-size: 25px;
      font-weight: bold;
-     color: #087FE7;
+     color: var(--main_blue);
      margin: 0;
  }
  nav {
@@ -63,11 +66,11 @@ body {
      height: 45px;
      border-radius: 100px;
      text-align: center;
-     background-color: #99B9FF;
+     background-color: var(--secondary_blue);
  }
  
  .actif {
-     background-color: #087FE7;
+     background-color: var(--main_blue);
  }
  
  .trait {
@@ -83,12 +86,15 @@ body {
      color: #ffff;
      font-weight: bold;
  }
- 
+ section {
+    width: 70%;
+    
+ }
  section #cours {
      display: flex;
      flex-direction: column;
      align-items: center;
-     width: 900px;
+     margin-top: 50px;
  }
  
  #title {
@@ -99,13 +105,11 @@ body {
  margin: -1px;
  }
  
- 
- 
- 
- #cours {
-     width: 1113px;
-     margin-top: 50px;
+ img {
+    max-width: 100%;
  }
+ 
+ 
  
  #cours p {
      font-size: 18px;
@@ -143,18 +147,114 @@ body {
  }
  .next p {
      font-size: 25px;
-     color: #087FE7;
+     color: var(--main_blue);
      font-family: "Inter", serif;
  }
+
  footer {
      display: flex;
      justify-content: flex-end;
      margin-top: 50px;
  }
  
- /*#cours img {
-     width: 1118px;
-     height: 327px;
-     margin-top: 50px;
-     margin-bottom: 50px;
- }*/
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    img {
+        max-width: 40%;
+    }
+.espace {
+    display: none;
+}
+    .chap {
+        width: 30px;
+        height: 30px;
+    }
+
+    .trait {
+        width: 30px;
+        height: 2px;
+    }
+    section {
+        width: 100%;
+        
+     }
+    section #cours {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer {
+        justify-content: center;
+    }
+
+    
+}
+
+@media (max-width: 680px) {
+    img {
+        max-width: 100%;
+    }
+
+    .margebottom {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 25px;
+        margin: 25px 0px;
+    }
+    
+    .margetop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .chap {
+        width: 25px;
+        height: 25px;
+    }
+
+    #title {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+  
+
+    .next p {
+        font-size: 18px;
+    }
+
+    
+}
