@@ -1,10 +1,13 @@
-import { btnListenerConf } from "./fonction.js";
 
-let buttons = document.querySelectorAll("button");
+import { initBtns } from "./functions/quiz.js";
 
-buttons.forEach(button => {
+export const stateContainer = document.querySelector("#stateContainer");
 
-	button.addEventListener("click", btnListenerConf());
+//if (stateContainer.getAttribute("reloading") === "true"){
+	
+//	initBtns();
+//	stateContainer.setAttribute("reloading", "false");
+	
+//}
 
-});
-
+initBtns(document.querySelectorAll(".answer"));
