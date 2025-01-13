@@ -204,7 +204,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch2-img1.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -238,7 +238,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch2-img2.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -272,7 +272,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch3-img1.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 		
@@ -296,7 +296,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch3-img2.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 		
@@ -320,7 +320,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch3-img3.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -354,7 +354,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch4-img1.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -388,7 +388,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch4-img2.jpg"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -422,7 +422,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch5-img1.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -446,7 +446,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch5-img2.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -470,7 +470,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch6-img1.jpg"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -504,7 +504,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch6-img2.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -538,7 +538,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch2-img1.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -562,7 +562,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch2-img2.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -596,7 +596,7 @@ export function changeStateQuiz(title, contentContainer, state){
 				
 					`;
 
-					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
+					document.querySelector("img").setAttribute("src", "../images/ch3-img2.png"); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
