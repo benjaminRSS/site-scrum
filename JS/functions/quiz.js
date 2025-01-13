@@ -661,7 +661,7 @@ function btnListenerConf(event){
 
 		let homeBtn = document.createElement("a");
 
-		homeBtn.setAttribute("href", "../../HTML/index.html");
+		homeBtn.setAttribute("href", "index.html");
 		homeBtn.id = "homeBtn";
 		homeBtn.textContent = "Retour à l'accueil";
 
