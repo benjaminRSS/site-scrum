@@ -1,1 +1,193 @@
+@import url(../CSS/components/colors.css);
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 7%;
+    font-family: "Inter", serif;
+    padding: 40px 30px 30px 30px;
+    justify-content: center;
+ }
+ 
+ 
+nav {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+    width: 120px;
+    height: 646px;
+}
+
+nav h2 {
+font-size: 25px;
+font-weight: bold;
+color: var(--main_blue);
+}
+
+nav ol {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ol li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size:20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary_blue);
+    height: 20px;
+    width: 20px;
+    padding: 15px;
+    border-radius: 100px;
+    position: relative;
+    color: white;
+}
+
+nav ol li:not(:last-child)::after {
+    content: "";
+    height: 5px;
+    width: 105px;
+    position: absolute;
+    background-color: var(--secondary_blue);
+    transform: rotate(90deg);
+    bottom: -55px;
+}
+
+.actif {
+    background-color: var(--main_blue);
+}
+ 
+
+main {
+    width: 75%;
+}
+ 
+ h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+ }
+ 
+
+ 
+#cours {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 50px;
+     
+ }
+
+#cours p {
+    font-size: 20px;
+    margin: 15px 0px;
+    text-align: justify;
+}
+ 
+img {
+    max-width: 100%;
+ }
+ 
+ 
+.bloc, .bloc-reverse {
+     display: flex;
+     flex-direction: row;
+     gap: 30px;
+     margin: 25px 0px;
+ }
+ 
+
+ 
+footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+   margin-top: 50px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+ button {
+     gap: 10px ;
+     border: none;
+     background: none;
+     cursor: pointer;
+     font-size: 25px;
+     color: var(--main_blue);
+     font-family: "Inter", serif;
+ }
+
+
+ 
+
+ 
+ 
+
+ 
+@media (max-width: 1000px) {
+
+
+    nav {
+        display: none;
+    }
+
+
+    img {
+        max-width: 100%;
+    }
+
+
+    .bloc-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 25px;
+        margin: 25px 0px;
+    }
+
+    .bloc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin: 25px 0px;
+    }
+    
+
+
+
+    
+}
+
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    
+}

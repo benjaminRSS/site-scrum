@@ -1,0 +1,33 @@
+@import url(colors.css);
+@import url(medias.css);
+
+/*====== Interactions ======*/
+
+button.correct {
+
+	background-color: var(--main_blue) !important;
+	color: white !important;
+
+}
+
+button.wrong {
+
+	background-color: black !important;
+	color: white !important;
+
+}
+
+/*====== Hovers ======*/
+
+button.answer:not(.wrong, .correct):hover {
+
+	background: #d9d9d9;
+
+}
+
+#stateContainer:has(button.correct, button.wrong) button.answer {
+
+	background: #f1f1f1;
+	cursor: default;
+
+}
