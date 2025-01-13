@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/index.css"/>
     <link rel="stylesheet" href="../CSS/quizz.css"/>
     <script type="module" src="../JS/index.js"></script> <!---Faut dire que le scripte est un module pour les imports--->
     <title>QUIZZ</title>
 </head>
 <body>
-    <main>
-        <!-- partie texte -->
-        <div id="stateContainer">
-            <h1>Testes tes connaissances en SCRUM maintenant !</h1>
-            <p>Alors, intéressant non ?
+    <main class="intro">
+        
+        <div id="stateContainer" class="intro">
+
+            <h1 class="intro">Testes tes connaissances en SCRUM maintenant !</h1>
+
+            <p id="subTitle">Alors, intéressant non ?
                 Un quiz pour se tester après la lecture est disponible en 15 questions : 2 par chapitres et 3 questions globales.
                 Une correction et des commentaires d’explication sont aussi disponibles ! </p>
 
-            <p><strong>Comment ça marche ?</strong></p>
+            <h2><strong>Comment ça marche ?</strong></h2>
 
-            <p>📋<strong>10 questions</strong> simples et pratiques</p>
-            <p>⏱<strong>5 à 10 minutes</strong> pour le compléter</p>
-            <p>🎯Identifies tes points forts et ceux à améliorer</p>
+            <ol class="intro">
+
+                <li>
+                    
+                    📋<strong>10 questions</strong> simples et pratiques
+                
+                </li>
+                <li>
+                    
+                    ⏱<strong>5 à 10 minutes</strong> pour le compléter
+                
+                </li>
+                <li>
+                    
+                    🎯Identifies tes points forts et ceux à améliorer
+                
+                </li>
+
+            </ol>
+
             <button id="startBtn">Commencer le quiz</button>
+            
         </div>
 
-        <!-- partie image -->
-        <div>
-            <img src="../images/illu-quizz.svg" alt="illustration pour la page quiz">
-        </div>
+        <img src="../images/illu-quizz.svg" alt="illustration pour la page quiz">
+
     </main>
 </body>
 </html>

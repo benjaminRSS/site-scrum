@@ -1,4 +1,3 @@
-import { stateContainer } from "../index.js";
 
 
 export function initBtns(buttons){
@@ -12,7 +11,7 @@ export function initBtns(buttons){
 }
 
 //Il faut référencer l'élément html qui sert de titre + celui du conteneur du cours, enfin il suffit de mettre le nom de l'état qui va le remplacer.
-export function changeState(title, contentContainer, state){
+export function changeStateQuiz(title, contentContainer, state){
 
 	if (title instanceof HTMLElement && contentContainer instanceof HTMLElement){
 
@@ -131,42 +130,49 @@ export function changeState(title, contentContainer, state){
 			//====== Etats du Quiz ======
 		
 				case "question1":
-		
-					title.textContent = "1. Quelle est la première étape de la méthode SCRUM ?";
+
+					//On met exprès le main en tant que content container
 					contentContainer.innerHTML = `
 				
-						<img src="../images/ch1-img3.png" alt="image illustration pour les questions">
+						<h1 class="">1. Quelle est la première étape de la méthode SCRUM ?</h1>
 						
-						<div>
-						
-							<ol>
+						<div id="stateContainer" class="quiz">
+
+							<img class="imgQuiz" src="../images/ch1-img3.png" alt="image illustration pour les questions">
+
+							<ol class="quiz">
 							
 								<li>
 								
-									<button>Mise en production du produit</button>
+									<button class="answer" response = "false">Réponse A : Mise en production du produit</button>
 								
 								</li>
 								<li>
 								
-									<button>Constitution de l’équipe SCRUM</button>
+									<button class="answer" response = "false">Réponse B : Constitution de l'équipe SCRUM</button>
 								
 								</li>
 								<li>
 								
-									<button>Clarification de la vision du produit</button>
+									<button class="answer" response = "true">Réponse C : Clarification de la vision du produit</button>
 								
 								</li>
 								<li>
 								
-									<button>Réunion de planification du sprint</button>
+									<button class="answer" response = "false">Réponse D : Réunion de planification du sprint</button>
 								
 								</li>
 							
 							</ol>
-						
-						</div>				
-				
+
+						</div>
 					`;
+
+					contentContainer.classList.remove("intro");
+					contentContainer.classList.add("quiz");
+					document.querySelector("ol").classList.remove("intro");
+
+					initBtns(document.querySelectorAll(".answer"));
 
 					break;
 		 
@@ -177,26 +183,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" response = "false">Réponse A : <br>Le Product Owner</button>
+							<button class="answer" response = "false">Réponse A : Le Product Owner</button>
 							
 						</li>
 						<li>
 
-							<button class="answer" response = "false">Réponse B : <br>Le Commanditaire</button>
+							<button class="answer" response = "false">Réponse B : Le Commanditaire</button>
 							
 						</li>
 						<li>
 
-							<button class="answer" response = "false">Réponse C : <br>Le Tuteur de stage</button>
+							<button class="answer" response = "false">Réponse C : Le Tuteur de stage</button>
 							
 						</li>
 						<li>
 
-							<button class="answer" response = "true">Réponse D : <br>Le SCRUM Master</button>
+							<button class="answer" response = "true">Réponse D : Le SCRUM Master</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -209,26 +217,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" response="true">Réponse A : <br>1 à 4 semaines</button>
+							<button class="answer" response="true">Réponse A : 1 à 4 semaines</button>
 							
 						</li>
 						<li>
 							
-							<button class="answer" response="false">Réponse B : <br>2 à 6 jours</button>
+							<button class="answer" response="false">Réponse B : 2 à 6 jours</button>
 							
 						</li>
 						<li>
 	
-                			<button class="answer" response="false">Réponse C : <br>3 à 7 semaines</button>
+                			<button class="answer" response="false">Réponse C : 3 à 7 semaines</button>
 							
 						</li>
 						<li>
 
-               				 <button class="answer" response="false">Réponse D : <br>2 à 3 mois</button>
+               				 <button class="answer" response="false">Réponse D : 2 à 3 mois</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -241,26 +251,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" response="true">Réponse A : <br>Une réunion de planification de sprint</button>
+							<button class="answer" response="true">Réponse A : Une réunion de planification de sprint</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>La nomination d’un nouveau SCRUM Master</button>
+                			<button class="answer" response="false">Réponse B : La nomination d’un nouveau SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>L’analyse des feedback utilisateurs</button>
+                			<button class="answer" response="false">Réponse C : L’analyse des feedback utilisateurs</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse D : <br>Il n’y a pas d’évènement spécifique</button>
+                			<button class="answer" response="false">Réponse D : Il n’y a pas d’évènement spécifique</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 		
@@ -273,16 +285,18 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" response="true">Réponse A : <br>VRAI</button>
+							<button class="answer" response="true">Réponse A : VRAI</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>FAUX</button>
+                			<button class="answer" response="false">Réponse B : FAUX</button>
 							
 						</li>		
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 		
@@ -295,16 +309,18 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>A permettre à l’équipe de se reposer en période de sprint</button>
+							<button class="answer" response="false">Réponse A : A permettre à l’équipe de se reposer en période de sprint</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse B : <br>Aider l’équipe à suivre sa progression</button>
+                			<button class="answer" response="true">Réponse B : Aider l’équipe à suivre sa progression</button>
 							
 						</li>		
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -317,26 +333,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" response="false">Réponse A : <br>Assigner les tâches restantes entre les membres de l’équipe</button>
+							<button class="answer" response="false">Réponse A : Assigner les tâches restantes entre les membres de l’équipe</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse B : <br>Écouter l’avis du SCRUM Master</button>
+                			<button class="answer" response="false">Réponse B : Écouter l’avis du SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="false">Réponse C : <br>Conclure le projet par la validation du produit final</button>
+                			<button class="answer" response="false">Réponse C : Conclure le projet par la validation du produit final</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" response="true">Réponse D : <br>Valider les résultats et récolter du feedback</button>
+                			<button class="answer" response="true">Réponse D : Valider les résultats et récolter du feedback</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -349,26 +367,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="false">Réponse A : <br>Le calendrier SCRUM</button>
+							<button class="answer" response="false">Réponse A : Le calendrier SCRUM</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="true">Réponse B : <br>Les fonctionnalités réalisés</button>
+                			<button class="answer" response="true">Réponse B : Les fonctionnalités réalisés</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse C : <br>Les interrogations du commanditaire</button>
+                			<button class="answer" response="false">Réponse C : Les interrogations du commanditaire</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse D : <br>L’avis de la presse sur le produit</button>
+                			<button class="answer" response="false">Réponse D : L’avis de la presse sur le produit</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -381,26 +401,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="true">Réponse A : <br>Que la réunion aboutisse sur des améliorations</button>
+							<button class="answer" response="true">Réponse A : Que la réunion aboutisse sur des améliorations</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse B : <br>De nommer un nouveau SCRUM Master</button>
+                			<button class="answer" response="false">Réponse B : De nommer un nouveau SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse C : <br>Il n’y participe pas</button>
+                			<button class="answer" response="false">Réponse C : Il n’y participe pas</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse D : <br>Il y assiste mais ne doit pas intervenir</button>
+                			<button class="answer" response="false">Réponse D : Il y assiste mais ne doit pas intervenir</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -413,16 +435,18 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="true">Réponse A : <br>VRAI</button>
+							<button class="answer" response="true">Réponse A : VRAI</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse B : <br>FAUX</button>
+                			<button class="answer" response="false">Réponse B : FAUX</button>
 							
 						</li>
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -435,16 +459,18 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="false">Réponse A : <br>VRAI</button>
+							<button class="answer" response="false">Réponse A : VRAI</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="true">Réponse B : <br>FAUX</button>
+                			<button class="answer" response="true">Réponse B : FAUX</button>
 							
 						</li>		
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -457,26 +483,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="false">Réponse A : <br>Le commanditaire</button>
+							<button class="answer" response="false">Réponse A : Le commanditaire</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse B : <br>Le Product Owner</button>
+                			<button class="answer" response="false">Réponse B : Le Product Owner</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse C : <br>Le SCRUM Master</button>
+                			<button class="answer" response="false">Réponse C : Le SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="true">Réponse D : <br>L’équipe projet</button>
+                			<button class="answer" response="true">Réponse D : L’équipe projet</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -489,26 +517,28 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="true">Réponse A : <br>La rétrospective</button>
+							<button class="answer" response="true">Réponse A : La rétrospective</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse B : <br>La validation du produit</button>
+                			<button class="answer" response="false">Réponse B : La validation du produit</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse C : <br>L’élaboration du calendrier SCRUM</button>
+                			<button class="answer" response="false">Réponse C : L’élaboration du calendrier SCRUM</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse D : <br>La constitution de l’équipe SCRUM</button>
+                			<button class="answer" response="false">Réponse D : La constitution de l’équipe SCRUM</button>
 							
 						</li>			
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -521,16 +551,18 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="false">Réponse A : <br>Vrai</button>
+							<button class="answer" response="false">Réponse A : Vrai</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="true">Réponse B : <br>Faux</button>
+                			<button class="answer" response="true">Réponse B : Faux</button>
 							
 						</li>	
 				
 					`;
+
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
 					initBtns(document.querySelectorAll(".answer"));
 
@@ -543,34 +575,30 @@ export function changeState(title, contentContainer, state){
 				
 						<li>
 
-							<button class="answer" data-correct="false">Réponse A : <br>Le commanditaire</button>
+							<button class="answer" response="false">Réponse A : Le commanditaire</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="true">Réponse B : <br>Le Product Owner</button>
+                			<button class="answer" response="true">Réponse B : Le Product Owner</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse C : <br>Le SCRUM Master</button>
+                			<button class="answer" response="false">Réponse C : Le SCRUM Master</button>
 							
 						</li>
 						<li>
 
-                			<button class="answer" data-correct="false">Réponse D : <br>L’équipe projet</button>
+                			<button class="answer" response="false">Réponse D : L’équipe projet</button>
 							
-						</li>		
-      					<br>
-        				<button class="home-btn">Retour à l'accueil</button>
+						</li>
 				
 					`;
 
-					initBtns(document.querySelectorAll(".answer"));
+					document.querySelector("img").setAttribute("src", ""); //TODO: changer la source
 
-					document.querySelector(".home-btn").addEventListener("click", () => {
-        				window.location.href = "../../HTML/index.html";
-    					});
+					initBtns(document.querySelectorAll(".answer"));
 
 					break;
 		 
@@ -598,20 +626,10 @@ function remListeners(buttons){
 
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const CommencerQuizButton = document.getElementById("commencer");
-
-    if (CommencerQuizButton) {
-        CommencerQuizButton.addEventListener("click", () => {
-            changeState("question1");
-			console.log("test");
-        });
-	}
-});
-
 //J'ai pas le choix que de faire une fonction simple => j'ai besoin de la retrouver pour l'enlever
 function btnListenerConf(event){
 
+	const stateContainer = document.querySelector("#stateContainer");
 	const buttons = document.querySelectorAll(".answer");
 
 	//Une fois le click -> on interdit les interactions pour valider la réponse visuellement
@@ -621,21 +639,36 @@ function btnListenerConf(event){
 	const button = event.target;
 
 	//Faire vérifier si la réponse est bonne => pouvoir déterminer le style de la mauvaise réponse
-
-	let nextBtn = document.createElement("button");
 	let divBtn = document.createElement("div");
-
+	
 	divBtn.id = "divBtn";
 
-	nextBtn.textContent = "Suivant ->";
-	nextBtn.onclick = () => {
-		
-		changeState(document.querySelector("h1"), document.querySelector("ol"), `question${nbQuiz}`);
-		nbQuiz += 1;
-		divBtn.remove();
-	};
+	if (nbQuiz < 16){
 
-	divBtn.appendChild(nextBtn);
+		let nextBtn = document.createElement("button");
+
+		nextBtn.textContent = "Suivant ->";
+		nextBtn.onclick = () => {
+			
+			changeStateQuiz(document.querySelector("h1"), document.querySelector("ol"), `question${nbQuiz}`);
+			nbQuiz += 1;
+			divBtn.remove();
+		};
+
+		divBtn.appendChild(nextBtn);
+
+	}else if (nbQuiz == 16) {
+
+		let homeBtn = document.createElement("a");
+
+		homeBtn.setAttribute("href", "../../HTML/index.html");
+		homeBtn.id = "homeBtn";
+		homeBtn.textContent = "Retour à l'accueil";
+
+		divBtn.appendChild(homeBtn);
+
+	}
+
 	stateContainer.appendChild(divBtn);
 
 	//Vérifier -> l'attribut "response" => tu ajoute la classe "wrong" si c'est faux + on va faire en sorte que le CSS de "Wrong" est prioritaire sur le CSS de actif de base

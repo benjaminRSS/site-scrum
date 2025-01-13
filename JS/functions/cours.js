@@ -1,5 +1,5 @@
 
-export function changeState(title, contentContainer, state) {
+export function changeStateCours(title, contentContainer, state) {
 	if (title && contentContainer) {
 		switch (state) {
 			case 1:

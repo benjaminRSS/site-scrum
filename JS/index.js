@@ -1,14 +1,8 @@
 
-import { initBtns, changeState } from "./functions/quiz.js";
-import {changeState,  updateActiveStep} from "./functions/cours.js";
-export const stateContainer = document.querySelector("#stateContainer");
+import { initBtns, changeStateQuiz } from "./functions/quiz.js";
+import {changeStateCours,  updateActiveStep} from "./functions/cours.js";
 
-//if (stateContainer.getAttribute("reloading") === "true"){
-	
-//	initBtns();
-//	stateContainer.setAttribute("reloading", "false");
-	
-//}
+//====== Init des boutons du quiz ======
 
 initBtns(document.querySelectorAll(".answer"));
 
@@ -16,7 +10,7 @@ let startBtn = document.getElementById("startBtn");
 
 startBtn.addEventListener("click", () => {
 
-	changeState(document.querySelector("h1"), document.getElementById("stateContainer"), "question1");
+	changeStateQuiz(document.querySelector("h1"), document.querySelector("main"), "question1");
 
 })
 
@@ -31,7 +25,7 @@ const contentContainer = document.getElementById("cours");
 document.addEventListener("click", function(event) {
 	if (event.target && event.target.id === "next") {
 		state++;
-		changeState(title, contentContainer, state);
+		changeStateCours(title, contentContainer, state);
 		updateActiveStep();
 	}
 });
