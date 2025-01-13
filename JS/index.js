@@ -5,19 +5,25 @@ import {changeStateCours,  updateActiveStep} from "./functions/cours.js";
 //====== Init des boutons du quiz ======
 
 initBtns(document.querySelectorAll(".answer"));
+const currentPage = window.location.pathname;
 
-let startBtn = document.getElementById("startBtn");
+if (currentPage.includes('quiz')) {
+
+	let startBtn = document.getElementById("startBtn");
 
 startBtn.addEventListener("click", () => {
 
 	changeStateQuiz(document.querySelector("h1"), document.querySelector("main"), "question1");
 
 })
+}
+
+
 
 //====== Cours ======
 
-//récup le boutton
-const nextButton = document.getElementById("#next");
+
+else if (currentPage.includes('cours')) {
 const title = document.querySelector("h1");
 let state = 1;
 const contentContainer = document.getElementById("cours");
@@ -29,3 +35,5 @@ document.addEventListener("click", function(event) {
 		updateActiveStep();
 	}
 });
+
+}
