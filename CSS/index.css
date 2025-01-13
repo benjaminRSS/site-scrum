@@ -7,6 +7,7 @@ body {
  main {
      display: flex;
      flex-direction: row;
+     align-items: center;
      margin: 45px;
      gap: 100px;
  }
@@ -55,4 +56,42 @@ a button {
     padding: 10px 25px;
     border-radius: 15px;
     margin-top: 40px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 1150px) { 
+
+    .illu img {
+        max-width: 400px;
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .illu img {
+        max-width: 400px;
+    }
+
+
+
+    .next p {
+        font-size: 1.2rem;
+    }
 }

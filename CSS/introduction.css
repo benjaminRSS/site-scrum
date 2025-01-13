@@ -22,14 +22,23 @@ button {
      align-items: center;
      cursor: pointer;
  }
- .next {
-     text-decoration: none;
- }
- .next p {
+ a {
+    text-decoration: none;
+    
+}
+
+
+ button {
+     gap: 10px ;
+     border: none;
+     background: none;
+     cursor: pointer;
      font-size: 25px;
      color: var(--main_blue);
      font-family: "Inter", serif;
+     margin-top: 50px;
  }
+
  h1 {
     margin: 0;
     font-size: 50px;
