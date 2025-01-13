@@ -105,7 +105,7 @@ export function changeStateCours(title, contentContainer, state) {
 			
 			<p>En SCRUM, la livraison est une conséquence logique d’un processus itératif bien mené. Elle valorise la transparence, l’efficacité, et la collaboration, garantissant que le produit final répond aux attentes des parties prenantes.</p>
 			<footer>
-                    <a href="../HTML/quizz/Quizz_accueil.html"><button id="next">Suivant -></button></a>
+                    <a href="../HTML/quiz.html"><button id="next">Terminer -></button></a>
                 </footer>`;
 				break;
 		}
